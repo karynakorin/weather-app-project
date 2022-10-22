@@ -1,0 +1,80 @@
+body {
+  min-height: fit-content;
+  font-family: "Montserrat", sans-serif;
+  color: #5a6066;
+}
+
+main {
+  max-width: 800px;
+  margin: 60px auto;
+  border: 1px solid #5a6066;
+  padding: 30px 30px 0 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #dee2e4;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 600;
+  float: right;
+}
+
+ul {
+  list-style: none;
+  padding-left: 3px;
+}
+
+h3 {
+  font-size: 17px;
+}
+
+.units {
+  font-size: 20px;
+  position: relative;
+  top: -25px;
+}
+
+.date {
+  font-size: 18px;
+  position: relative;
+  left: 3px;
+}
+
+.search-box {
+  margin: 0 auto;
+  width: 450px;
+}
+
+.weather-info {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: 100px 100px;
+  grid-template-areas: "first third" "second third";
+  padding: 30px 20px 0;
+}
+
+.city-info {
+  grid-area: first;
+}
+
+.detailed-info {
+  grid-area: second;
+}
+
+.degree-info {
+  grid-area: third;
+}
+
+.weekly-weather {
+  padding-top: 10px;
+  display: flex;
+  text-align: center;
+  column-gap: 10%;
+  padding-left: 15px;
+}
