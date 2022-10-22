@@ -24,7 +24,7 @@ function formatDate(date) {
 }
 
 function showTemp(response) {
-  document.querySelector("h1").innerHTML = response.data.name;
+  document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#main-temperature").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -42,7 +42,7 @@ function showTemp(response) {
 
 function searchCity(city) {
   let apiKey = "3fdc8cfbf2d6fa0116c9ae92d3df4f79";
-  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
 }
 
@@ -54,7 +54,7 @@ function handleSubmit(event) {
 
 function retrievePosition(position) {
   let apiKey = "3fdc8cfbf2d6fa0116c9ae92d3df4f79";
-  let apiUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
 }
 
