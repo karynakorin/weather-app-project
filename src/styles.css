@@ -11,6 +11,7 @@ main {
   padding: 30px 30px 0 30px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px #dee2e4;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -28,10 +29,6 @@ h2 {
 ul {
   list-style: none;
   padding-left: 3px;
-}
-
-h3 {
-  font-size: 17px;
 }
 
 .units {
@@ -77,4 +74,10 @@ h3 {
   text-align: center;
   column-gap: 10%;
   padding-left: 15px;
+}
+
+.footer {
+  font-size: 15px;
+  text-align: center;
+  color: #85888b;
 }
