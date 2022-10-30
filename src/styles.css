@@ -68,12 +68,9 @@ ul {
   grid-area: third;
 }
 
-.weekly-weather {
-  padding-top: 10px;
-  display: flex;
-  text-align: center;
-  column-gap: 10%;
-  padding-left: 15px;
+.degree-info img {
+  position: relative;
+  top: -4px;
 }
 
 .footer {
