@@ -1,4 +1,5 @@
-function formatDate(date) {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -8,7 +9,6 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  let dayIndex = date.getDay();
   let days = [
     "Sunday",
     "Monday",
@@ -18,6 +18,7 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
+  let dayIndex = date.getDay();
   let day = days[dayIndex];
 
   return `${day}, ${hours}:${minutes}`;
@@ -46,6 +47,9 @@ function showTemp(response) {
   document.querySelector("#pressure").innerHTML = response.data.main.pressure;
   document.querySelector("#feels-like").innerHTML = Math.round(
     response.data.main.feels_like
+  );
+  document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
   );
 }
 
@@ -76,10 +80,6 @@ let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", handleSubmit);
 let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", getCurrentLocation);
-
-let dateElement = document.getElementById("current-day");
-let currentDate = new Date();
-dateElement.innerHTML = formatDate(currentDate);
 
 searchCity("Montreal");
 
