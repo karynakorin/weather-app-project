@@ -35,9 +35,10 @@ function showTemp(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
-  document.querySelector("#main-temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+
+  celsiusTemperature = Math.round(response.data.main.temp);
+
+  document.querySelector("#main-temperature").innerHTML = celsiusTemperature;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = Math.round(
@@ -75,30 +76,34 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  document.querySelector("#main-temperature").innerHTML = Math.round(
+    (celsiusTemperature * 9) / 5 + 32
+  );
+}
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  document.querySelector("#main-temperature").innerHTML =
+    Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", handleSubmit);
 let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", getCurrentLocation);
 
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemp);
+
 searchCity("Montreal");
-
-/*
-function changeCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#main-temperature");
-  temperatureElement.innerHTML = 12;
-}
-
-function changeFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#main-temperature");
-  temperatureElement.innerHTML = 54;
-}
-*/
-
-/* let celciusButton = document.getElementById("celsius-unit");
-celciusButton.addEventListener("click", changeCelsius);
-
-let fahrenheitButton = document.getElementById("fahrenheit-unit");
-fahrenheitButton.addEventListener("click", changeFahrenheit);
-*/
