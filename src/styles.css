@@ -85,3 +85,8 @@ ul {
   text-align: center;
   color: #85888b;
 }
+
+#description {
+  text-transform: capitalize;
+  color: #5a6066;
+}

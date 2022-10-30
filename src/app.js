@@ -38,6 +38,8 @@ function showTemp(response) {
   document.querySelector("#main-temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
   );
@@ -45,9 +47,6 @@ function showTemp(response) {
     response.data.wind.speed * 3.6
   );
   document.querySelector("#pressure").innerHTML = response.data.main.pressure;
-  document.querySelector("#feels-like").innerHTML = Math.round(
-    response.data.main.feels_like
-  );
   document.querySelector("#date").innerHTML = formatDate(
     response.data.dt * 1000
   );
