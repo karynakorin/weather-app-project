@@ -24,7 +24,6 @@ function formatDate(date) {
 }
 
 function showTemp(response) {
-  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document
     .querySelector("#icon")
