@@ -8,7 +8,7 @@ main {
   max-width: 800px;
   margin: 60px auto;
   border: 1px solid #5a6066;
-  padding: 30px 30px 0;
+  padding: 30px 30px;
   border-radius: 10px;
   box-shadow: 5px 5px 15px #dee2e4;
   margin-bottom: 10px;
@@ -98,4 +98,15 @@ ul {
 .degree-info .active {
   color: #5a6066;
   cursor: default;
+}
+
+.weather-forecast {
+  text-align: center;
+  color: #5a6066;
+  font-size: 16px;
+}
+
+.weather-forecast-temperature-min {
+  font-size: 15px;
+  color: #85888b;
 }
