@@ -84,11 +84,6 @@ hr {
   color: #5a6066;
 }
 
-.degree-info .active {
-  color: #5a6066;
-  cursor: default;
-}
-
 .weather-forecast {
   text-align: center;
   color: #5a6066;

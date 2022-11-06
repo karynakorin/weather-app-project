@@ -127,34 +127,11 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 
-function showFahrenheitTemp(event) {
-  event.preventDefault();
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  document.querySelector("#main-temperature").innerHTML = Math.round(
-    (celsiusTemperature * 9) / 5 + 32
-  );
-}
-
-function showCelsiusTemp(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  document.querySelector("#main-temperature").innerHTML =
-    Math.round(celsiusTemperature);
-}
-
 let celsiusTemperature = null;
 
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", handleSubmit);
 let locationButton = document.querySelector("#location-button");
 locationButton.addEventListener("click", getCurrentLocation);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemp);
 
 searchCity("Montreal");
