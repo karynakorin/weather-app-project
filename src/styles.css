@@ -12,6 +12,7 @@ main {
   border-radius: 10px;
   box-shadow: 5px 5px 15px #dee2e4;
   margin-bottom: 10px;
+  background-color: #f4f4f4;
 }
 
 h1 {
@@ -36,6 +37,10 @@ ul {
   padding-left: 3px;
 }
 
+hr {
+  margin-top: 0;
+}
+
 .units {
   font-size: 16px;
   position: relative;
@@ -53,11 +58,11 @@ ul {
   width: 450px;
 }
 
+.btn {
+    background-color: #fff;
+}
+
 .weather-info {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-rows: 100px 100px;
-  grid-template-areas: "first third" "second third";
   padding: 10px 20px 0;
 }
 
@@ -65,29 +70,13 @@ ul {
   color: #85888b;
 }
 
-.city-info {
-  grid-area: first;
-}
-
 .detailed-info {
   color: #85888b;
-  padding-top: 10px;
-  grid-area: second;
-}
-
-.degree-info {
-  grid-area: third;
 }
 
 .degree-info img {
   position: relative;
   top: -5px;
-}
-
-.footer {
-  font-size: 15px;
-  text-align: center;
-  color: #85888b;
 }
 
 #description {
@@ -109,4 +98,15 @@ ul {
 .weather-forecast-temperature-min {
   font-size: 15px;
   color: #85888b;
+}
+
+.footer {
+  font-size: 15px;
+  text-align: center;
+  color: #85888b;
+}
+
+.footer a {
+    color: #5a6066;
+    text-decoration: underline;
 }

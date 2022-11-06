@@ -48,20 +48,12 @@
           </button>
         </form>
       </div>
-      <div class="weather-info">
-        <div class="city-info">
+      <div class="row weather-info">
+        <div class="col-6 city-info">
           <h1 id="city"></h1>
           <p class="update-info">Last updated: <span id="date"></span></p>
         </div>
-        <div class="detailed-info">
-          <ul>
-            <li><span id="description"></span></li>
-            <li>Humidity: <span id="humidity"></span>%</li>
-            <li>Wind: <span id="wind-speed"></span> km/h</li>
-            <li>Pressure: <span id="pressure"></span> hPa</li>
-          </ul>
-        </div>
-        <div class="degree-info">
+        <div class="col-6 degree-info">
           <h2>
             <span><img src="#" alt="..." id="icon" /></span>
             <span id="main-temperature"></span
@@ -71,26 +63,26 @@
             >
           </h2>
         </div>
+        <div class="col-12 detailed-info">
+          <ul>
+            <li><span id="description"></span></li>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind-speed"></span> km/h</li>
+            <li>Pressure: <span id="pressure"></span> hPa</li>
+          </ul>
+        </div>
       </div>
       <hr />
       <div class="weather-forecast" id="forecast"></div>
     </main>
     <footer>
       <p class="footer">
-        This project was coded by
-        <a
-          href="https://www.linkedin.com/in/karyna-korin-536b02239/"
-          target="_blank"
-          >Karyna Korin</a
-        >
-        and is
         <a
           href="https://github.com/karynakorin/weather-app-project"
           target="_blank"
-          >open-sourced on GitHub</a
+          >Open-source code</a
         >
-        and
-        <a href="https://www.netlify.com/" target="_blank">hosted on Netlify</a>
+        by Karyna Korin
       </p>
     </footer>
     <script src="src/app.js"></script>
